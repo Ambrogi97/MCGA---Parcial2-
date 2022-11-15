@@ -50,7 +50,6 @@ export const {
 
 export default productsSlice.reducer;
 
-// get all products
 export const fetchProducts = () => async dispatch => {
   try {
     dispatch(getProducts());
@@ -61,7 +60,6 @@ export const fetchProducts = () => async dispatch => {
   }
 };
 
-// create a new product
 export const createProduct = product => async dispatch => {
   try {
     const response = await axios.post("http://localhost:5000/products", product);
@@ -73,7 +71,6 @@ export const createProduct = product => async dispatch => {
   }
 };
 
-// delete a product
 export const removeProduct = product => async dispatch => {
   try {
     const response = await axios.delete(`http://localhost:5000/products/${product._id}`);
@@ -85,7 +82,6 @@ export const removeProduct = product => async dispatch => {
   }
 };
 
-// update a product
 export const editProduct = product => async dispatch => {
   try {
     const response = await axios.put(`http://localhost:5000/products/${product._id}`, product);
