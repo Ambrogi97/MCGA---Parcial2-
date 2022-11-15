@@ -23,9 +23,9 @@ const Form = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <input type="text" {...register("name", { required: true })} placeholder="Nombre:" />
         {errors?.name && <p>El nombre es requerido</p>}
-        <input type="text" {...register("price", { required: true })} placeholder="Precio:" />
+        <input type="number" {...register("price", { required: true })} placeholder="Precio:" />
         {errors?.price && <span>El precio es requerido</span>}
-        <input type="text" {...register("stock", { required: true })} placeholder="Stock:" />
+        <input type="number" {...register("stock", { required: true })} placeholder="Stock:" />
         {errors?.stock && <span>El stock es requerido</span>}
         <input
           type="text"
